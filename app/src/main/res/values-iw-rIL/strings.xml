@@ -7,7 +7,7 @@
     <string name="treatmentssafety_title">בטיחות טיפולים</string>
     <string name="treatmentssafety_maxbolus_title">בולוס מקסימלי מותר [U]</string>
     <string name="treatmentssafety_maxcarbs_title">מקסימום פחמימות מותר [g]</string>
-    <string name="nav_preferences_plugin">%1$s העדפות</string>
+    <string name="nav_preferences_plugin">העדפות %1$s</string>
     <string name="nav_preferences">העדפות</string>
     <string name="nav_refreshtreatments">רענן טיפול מ-Nightscout</string>
     <string name="nav_resetdb">איפוס מסדי נתונים</string>
@@ -44,7 +44,7 @@
     <string name="description_source_xdrip">קבלת ערכי סוכר מ-xDrip.</string>
     <string name="description_treatments">שמירת כל הטיפולים שנעשו</string>
     <string name="description_wear">ניטור ושליטה ב-AndroidAPS באמצעות שעון WearOS.</string>
-    <string name="description_xdrip_status_line">הצג מידע אודות הלולאה במסך Xdrip בשעון החכם.</string>
+    <string name="description_xdrip_status_line">הצג מידע אודות הלולאה במסך xDrip בשעון החכם.</string>
     <string name="description_sms_communicator">שליטה מרחוק על AndroidAPS באמצעות SMS.</string>
     <string name="treatments_insulin_label_string">אינסולין:</string>
     <string name="treatments_carbs_label_string">פחמימות:</string>
@@ -156,7 +156,7 @@
     <string name="nav_import">יבא הגדרות</string>
     <string name="openapsma_maxbasal_title">מינון בזאלי זמני מקסימלי (יח\'\\שעה)</string>
     <string name="openapsma_maxbasal_summary">ערך זה נקרא בזאלי מרבי ב-OpenAPS</string>
-    <string name="openapsma_maxiob_title">בזאלי פעיל מרבי ש-OpenAPS יכול לספק [U]</string>
+    <string name="openapsma_maxiob_title">בזאלי פעיל מרבי ש-OpenAPS יכול לספק (יחידות) </string>
     <string name="openapsma_maxiob_summary">ערך זה נקרא אינסולין פעיל מקסימלי (Max IOB) ב-OpenAPS. זהו מקסימום האינסולין הפעיל ב-[U] ש-APS מאפשר.</string>
     <string name="password_preferences_encrypt_prompt">אתם תתבקשו למלא סיסמה ראשית שתשמש להצפנת ההעדפות המיוצאות.</string>
     <string name="password_preferences_decrypt_prompt">אתם תתבקשו למלא סיסמה ראשית שתשמש לפיענוח ההעדפות המיובאות.</string>
@@ -175,7 +175,7 @@
     <string name="check_preferences_import_btn">ייבוא</string>
     <string name="check_preferences_import_anyway_btn">ייבא בכל מקרה (מסוכן!)</string>
     <string name="end_user_license_agreement">הסכם רישיון למשתמש</string>
-    <string name="end_user_license_agreement_text">לא מיועד לשימוש למטרת קבלת החלטות רפואיות. בעלי הזכויות מספקים את התוכנית כפי שהיא - \"AS IS\", ללא אחריות מכל סוג שהוא. כל סיכון הנובע מאיכות ו\או ביצועי התוכנה הוא באחריותך בלבד. במידה ותימצא תקלה בתוכנית, אתם תשאו בכל עלויות שיגרמו לך בשל התקלה.</string>
+    <string name="end_user_license_agreement_text">לא מיועד לשימוש למטרת קבלת החלטות רפואיות. בעלי הזכויות מספקים את התוכנית כפי שהיא - \"AS IS\", ללא אחריות מכל סוג שהוא. כל סיכון הנובע מאיכות ו\\או ביצועי התוכנה הוא באחריותך בלבד. במידה ותימצא תקלה בתוכנית, אתם תשאו בכל עלויות שיגרמו לך בשל התקלה.</string>
     <string name="end_user_license_agreement_i_understand">אני מבין ומסכים</string>
     <string name="save">שמור</string>
     <string name="reloadprofile">טעינה מחדש של הפרופיל</string>
@@ -217,7 +217,7 @@
     <string name="smscommunicator_remotecommandnotallowed">פקודה מרוחקת אינה מותרת</string>
     <string name="smscommunicator_remotebolusnotallowed">בולוס מרחוק אינו זמין. נסו שוב מאוחר יותר.</string>
     <string name="smscommunicator_basalreplywithcode">להפעלת בזאלי %1$.2f יח\' לשעה למשך %2$d דקות יש להשיב עם הקוד %3$s</string>
-    <string name="smscommunicator_profilereplywithcode">להחלפת פרופיל ל- %1$s %2$d % הקש קוד %3$s</string>
+    <string name="smscommunicator_profilereplywithcode">להחלפת פרופיל ל- %1$s %2$d %% הקש את הקוד %3$s</string>
     <string name="smscommunicator_extendedreplywithcode">למתן בולוס ממושך %1$.2f יח\' למשך %2$d דקות יש להשיב עם הקוד %3$s</string>
     <string name="smscommunicator_carbsreplywithcode">למתן %1$d גר\' ב-%2$s יש להשיב עם הקוד %3$s</string>
     <string name="smscommunicator_basalpctreplywithcode">להפעלת בזאלי %1$d%% למשך %2$d דקות הקש קוד %3$s</string>
@@ -225,7 +225,7 @@
     <string name="smscommunicator_loopresumereplywithcode">להפעלת הלולאה מחדש יש להשיב עם הקוד %1$s</string>
     <string name="smscommunicator_loopenablereplywithcode">כדי לאפשר הלולאה יש להשיב עם הקוד %1$s</string>
     <string name="smscommunicator_loopdisablereplywithcode">להשבתת הלולאה יש להשיב עם הקוד %1$s</string>
-    <string name="smscommunicator_tempbasalset">בזאלי זמני %1$.2f יחידות/שעה למשך %2$d דקות הופעל בהצלחה</string>
+    <string name="smscommunicator_tempbasalset">בזאלי זמני %1$.2f יחידות\\שעה למשך %2$d דקות הופעל בהצלחה</string>
     <string name="smscommunicator_extendedset">בולוס ממושך %1$.2f יחידות למשך %2$d דקות הופעל בהצלחה</string>
     <string name="smscommunicator_carbsset">%1$d גר\' פחמימות נקלטו בהצלחה</string>
     <string name="smscommunicator_carbsfailed">קליטת %1$d גר\' פחמימות נכשלה</string>
@@ -312,7 +312,7 @@
     <string name="openapsama_current_basal_safety_multiplier_summary">ערך ברירת מחדל: 4 זהו החצי השני של מנגנון הגנה עיקרי של OpenAPS, והחצי השני של \"3x max daily; 4x current\" במנגנוני ההגנה. המשמעות היא שהמינון הבזאלי, ללא קשר למקסימום שנקבע במשאבה, אינו יכול להיות גבוה יותר ממספר זה כפול הקצב הבזאלי הנוכחי. מיועד למנוע כניסה לתחומים מסוכנים ע\"י קביעת קצב בזאלי גבוה לפני הבנה של פעולת האלגוריתם. שוב: ברירת המחדל היא x4, רוב המשתמשים לעולם אינם צריכים לשנות ערך זה ואם הם מרגישים שמנגנון הגנה זה מפריע להם, הפתרון הוא בשינוי של הגדרות אחרות.</string>
     <string name="openapsama_autosens_max_summary">ערך ברירת מחדל: 1.2\nזוהי מגבלת המכפיל של autosens (ובקרוב autotune) שמגדירה 20%% כיחס מקסימלי של autosens, אשר קובע בתורו את גובה הבזאלי המקסימלי, גובהו המינימלי של יחס התיקון, ואת המינימום של ערכי המטרה האפשריים.</string>
     <string name="openapsama_autosens_min_summary">ערך ברירת מחדל: 0.7\nבצד השני של מגבלות הבטיחות של autosens, ערך זה מגביל את יכולתו של autosens להוריד את הערכים הבזאליים ועד כמה יכול להעלות את יחס התיקון ואת ערכי מטרת הסוכר בדם.</string>
-    <string name="openapsama_autosens_adjusttargets">Autosens מווסת גם את ערכי המטרה</string>
+    <string name="openapsama_autosens_adjusttargets">וויסות ערכי מטרה ע\"י Autosens</string>
     <string name="openapsama_autosens_adjusttargets_summary">ערך ברירת מחדל: התאמה מדויקת\n נועד לאפשר ל-Autosens לשנות את המטרה של ערכי הסוכר, בנוסף ליחס התיקון והבזאלים.</string>
     <string name="openapsama_bolussnooze_dia_divisor_summary">ערך ברירת מחדל: 2\n מעכב בולוס מופעל אחרי שאתם מזריקים בולוס ארוחה, כך שהלולאה לא תפצה ע\"י בזאלי זמני נמוך אחרי הארוחה. הדוגמה כאן וברירת המחדל היא 2; כך שהגדרה של משך פעילות אינסולין של 3 שעות משמעה שהעיכוב יחלוף בהדרגה בתוך 1.5 שעות (3 ש\' לחלק ל-2).</string>
     <string name="openapsama_min_5m_carbimpact_summary">ערך ברירת מחדל: 3.0 (AMA) או 8.0 (SMB). זוהי הגדרת ברירת מחדל לספיגת פחמימות ב-5 דקות. ברירת המחדל היא 3mg/dL/5min. פעולה זו משפיעה על קצב הדעיכה של פחמ\' פעילות, ועל הנחת קצב ספיגת הפחמ\' בחישוב רמות סוכר עתידיות כשהן בירידה מהירה מהצפוי או עליה איטית מהצפוי.</string>
@@ -352,14 +352,14 @@
     <string name="nosuccess">נכשל - נא לבדוק את הטלפון</string>
     <string name="notavailable">לא זמין</string>
     <string name="patientage">סוג המטופל\\ת</string>
-    <string name="child">ילד/ה</string>
+    <string name="child">ילד\\ה</string>
     <string name="teenage">מתבגר\\ת</string>
     <string name="adult">מבוגר\\ת</string>
     <string name="resistantadult">מבוגר\\ת עם תנגודת אינסולין גבוהה</string>
     <string name="pregnant">הריון</string>
     <string name="patientage_summary">נא לבחור את גיל המטופל\\ת להתאמת מגבלות בטיחות</string>
-    <string name="patient_name">שם מטופל</string>
-    <string name="patient_name_summary">נא לציין שם המטופל או כינוי, להבחנה בין מספר הגדרות</string>
+    <string name="patient_name">שם מטופל\\ת</string>
+    <string name="patient_name_summary">נא לציין שם המטופל\\ת או כינוי, להבחנה בין מספר הגדרות</string>
     <string name="patient_name_default" comment="This is default patient display name, when user does not provide real one">משתמש</string>
     <string name="Glimp">Glimp</string>
     <string name="needwhitelisting">%1$s צריך ביטול אופטימיזציית סוללה בשביל תפקוד תקין</string>
@@ -420,6 +420,7 @@
     <string name="basal_shortname">בזאל\'</string>
     <string name="deviation_shortname">סטייה</string>
     <string name="activity_shortname">פעילות</string>
+    <string name="bgi_shortname">השפעה</string>
     <string name="abs_insulin_shortname">אבס\'</string>
     <string name="devslope_shortname">שיפוע</string>
     <string name="nav_about">אודות</string>
@@ -435,7 +436,6 @@
     <string name="overview_extendedbolus_cancel_button">ביטול בולוס ממושך</string>
     <string name="doprofileswitch">החלפת פרופיל</string>
     <string name="careportal_sensor_label">סנסור</string>
-    <string name="careportal_canula_label">צינורית</string>
     <string name="careportal_insulin_label">אינסולין</string>
     <string name="careportal_pb_label">סוללת משאבה</string>
     <string name="careportal_age_label">גיל:</string>
@@ -530,7 +530,7 @@
     <string name="carbsReqThreshold">סף מינ\' הפחמימות הנדרשות להצעה</string>
     <string name="carbsReqThreshold_summary">כמות הפחמ\' המינימלית (גר\') הדרושה כדי שתוצג התראה על הצעת פחמימות. לא תוצגנה התראות על הצעות הנמוכות מכמות זו.</string>
     <string name="dexcomg5_xdripupload_title">שליחת נתוני סוכר אל xDrip</string>
-    <string name="dexcomg5_xdripupload_summary">ב-Xdrip בחרו 640g/Eversense כמקור נתונים</string>
+    <string name="dexcomg5_xdripupload_summary">ב-xDrip בחרו 640g/Eversense כמקור נתונים</string>
     <string name="nsclientbg">רמת סוכר מ-NSClient</string>
     <string name="overview_editquickwizard_usebg">חישוב רמת הסוכר</string>
     <string name="overview_editquickwizard_usebolusiob">חישוב IOB של בולוס</string>
@@ -548,7 +548,6 @@
     <string name="maxiobset">IOB מקסימלי הוגדר כראוי</string>
     <string name="hasbgdata">ערכי סוכר זמינים מהמקור הנבחר</string>
     <string name="combo_programming_bolus">מתכנת משאבה למתן בולוס</string>
-    <string name="combo_refresh">רענן</string>
     <string name="combo_pump_state_label">סטטוס</string>
     <string name="combo_pump_activity_label">פעילות</string>
     <string name="combo_no_pump_connection">אין חיבור כבר %1$d דקות</string>
@@ -629,6 +628,7 @@
     <string name="ns_autobackfill_summary">לטעינת הנתונים האוטומטית חסרים נתוני סוכר מ-Nightscout</string>
     <string name="loop_smbsetbypump_label">SMB מוגדר באמצעות משאבה</string>
     <string name="overview_show_activity">פעילות</string>
+    <string name="overview_show_bgi">השפעת הסוכר בדם</string>
     <string name="overview_show_sensitivity">רגישות</string>
     <string name="overview_show_deviations">חריגות</string>
     <string name="overview_show_cob">פחמימות פעילות</string>
@@ -678,7 +678,7 @@
     <string name="smbnotallowedinopenloopmode">SMB אינו פעיל במצב לולאה פתוחה</string>
     <string name="food_short">מזון</string>
     <string name="reset">איפוס</string>
-    <string name="openapssmb_maxiob_title">מינון אינסולין פעיל מרבי ממנו OpenAPS לא יחרוג [U]</string>
+    <string name="openapssmb_maxiob_title">מינון אינסולין פעיל מרבי ממנו OpenAPS לא יחרוג (יחידות) </string>
     <string name="openapssmb_maxiob_summary">ב-OpenAPS ערך זה נקרא מקסימום אינסולין פעיל (maxIOB). \nלא יוזרק עוד אינסולין אם כמות האינסולין הפעיל הנוכחי גדול מערך זה</string>
     <string name="pump_stopped">המשאבה נעצרה</string>
     <string name="pump_started">המשאבה הופעלה</string>
@@ -704,8 +704,8 @@
     <string name="connectionsettings_title">הגדרות חיבור</string>
     <string name="ns_wifi_allowedssids">SSID מורשים (מופרדים בנקודה-פסיק)</string>
     <string name="ns_allowroaming">אפשר חיבור בנדידה</string>
-    <string name="openapsama_autosens_max">יחס autosens מקסימלי</string>
-    <string name="openapsama_autosens_min">יחס autosens מינימלי</string>
+    <string name="openapsama_autosens_max">יחס Autosens מקסימלי</string>
+    <string name="openapsama_autosens_min">יחס Autosens מינימלי</string>
     <string name="openapsama_bolussnooze_dia_divisor">נמנום בולוס - מחלק משך פעילות אינסולין</string>
     <string name="openapsama_max_daily_safety_multiplier">מכפלת בטיחות בזאלי יומי מירבי</string>
     <string name="openapsama_current_basal_safety_multiplier">מכפלת בטיחות בזאלי נוכחי</string>
@@ -773,7 +773,7 @@
     <string name="delete_logs">מחק רישומים</string>
     <string name="error_adding_treatment_message">לא ניתן להוסיף טיפול (אינסולין: %1$.2f, פחמ\': %2$d, בשעה: %3$s) לטיפולים. נא לבדוק ולהוסיף רשומה באופן ידני כנדרש.</string>
     <string name="generated_ecarbs_note">פחמימות ממושכות: %1$d גר\' (%2$d ש\'), עיכוב %3$d דק\'</string>
-    <string name="openaps_noasdata">אין נתוני autosens זמינים</string>
+    <string name="openaps_noasdata">אין נתוני Autosens זמינים</string>
     <string name="nav_logsettings">הגדרות יומן רישום</string>
     <string name="resettodefaults">אפס לברירת המחדל</string>
     <string name="nsmalfunction">תקלה ב-NSClient. שקלו להפעיל את Nightscout ו-NSClient מחדש.</string>
@@ -839,7 +839,6 @@
     <string name="eb_formatter">%1$.2f / %2$.2f יח\' במשך %3$d דק\'</string>
     <string name="enable_tbr_over_notification">אפשר התראה על סיום בזאלי זמני\n(הגדרת משאבה)</string>
     <string name="disable_tbr_over_notification">השבת התראה על סיום בזאלי זמני\n(הגדרת משאבה)</string>
-    <string name="refresh">רענן</string>
     <string name="description_pump_insight_local">חיבור משאבת Accu-Chek Insight</string>
     <string name="not_inserted">לא הוכנס</string>
     <string name="short_status_last_connected">חיבור אחרון: לפני %1$d דק\'</string>
@@ -1064,8 +1063,6 @@
     <string name="insight_alert_notification_channel">התראות משאבת Insight</string>
     <!-- SMS Communicator & OTP Authenticator -->
     <string name="smscommunicator_code_from_authenticator_for" comment="This is continuation of sentence: To [ACTION] reply with code">מיישום מאמת עבור: %1$s ואחריו PIN</string>
-    <string name="smscommunicator_otp_enabled">אפשר מאמת</string>
-    <string name="smscommunicator_otp_enabled_summary">אמת פקודות באמצעות סיסמאות חד פעמיות שהופקו ע\"י מאמת Google או יישומי 2FA אחרים.</string>
     <string name="smscommunicator_otp_pin">תוספת PIN חובה בסוף האסימון</string>
     <string name="smscommunicator_otp_pin_summary">ספרות נוספות שיש לשנן ולהדביק בסוף כל אחת מהסיסמאות החד פעמיות</string>
     <string name="smscomunicator_tab_otp_label">הגדרת מאמת</string>
@@ -1121,14 +1118,14 @@
     <string name="setup_failed">ההתקנה נכשלה</string>
     <string name="there_was_an_error">חלה שגיאה. בבקשה נסו להתחבר שוב כדי להמשיך. סליחה ותודה!</string>
     <string name="open_humans_terms">זהו כלי קוד פתוח שיעתיק את הנתונים שלכם ל-Open Humans. אין לנו זכויות לחלוק את הנתונים שלך עם צדדים שלישיים ללא אישורכם המפורש. הנתונים שהפרויקט והיישום מקבלים מזוהים באמצעות מספר זיהוי משתמש אקראי ויעברו באופן מאובטח לחשבון Open Humans באישורכם. תוכלו להפסיק לשלוח ולמחוק את נתוניכם בכל עת דרך www.openhumans.org.</string>
-    <string name="i_understand_and_agree">אני מבינ/ה ומסכימ/ה.</string>
+    <string name="i_understand_and_agree">אני מבינ\\ה ומסכימ\\ה.</string>
     <string name="login">התחברות</string>
     <string name="logout">התנתקות</string>
     <string name="oh_logout_confirmation">אתם בטוחים שברצונכם להתנתק ולהפסיק לתרום מידע למדע?</string>
     <string name="project_member_id">זיהוי משתתף פרויקט: %s</string>
     <string name="queue_size">גודל התור: %d</string>
     <string name="terms_of_use">תנאי השימוש</string>
-    <string name="not_logged_in">לא מחובר/ת</string>
+    <string name="not_logged_in">לא מחובר\\ת</string>
     <string name="you_need_to_accept_the_of_use_first">עליכם להסכים לתנאי השימוש.</string>
     <string name="successfully_logged_in">ההתחברות הצליחה</string>
     <string name="setup_will_continue_in_background">ההתקנה תושלם כעת ברקע. תודה על שליחת הנתונים שלכם.\n\nאנא השאירו את תוסף זה ואת מכשיר הטלפון שלכם מופעל לזמן קצר כדי להשלים את ההתקנה.</string>
@@ -1159,4 +1156,9 @@
     <string name="timetoeat">זמן לאכול</string>
     <string name="fabric_upload_disabled">העלאת רשומות קריסה מושבתת!</string>
     <string name="graph_menu_divider_header">גרף</string>
+    <string name="chart_menu">תפריט הגרף</string>
+    <string name="clear_filter">נקה סינון</string>
+    <string name="trend_arrow">חץ מגמה</string>
+    <string name="cannula">צינורית</string>
+    <string name="userentry">קלט המשתמש</string>
 </resources>

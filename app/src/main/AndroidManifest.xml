@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="info.nightscout.androidaps">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -26,6 +25,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="com.dexcom.cgm.EXTERNAL_PERMISSION" />
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <uses-permission-sdk-23 android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
@@ -136,10 +136,6 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
-        <!-- Service processing incomming data -->
-        <service
-            android:name=".services.DataService"
-            android:exported="false" />
         <service
             android:name=".services.LocationService"
             android:exported="false" />

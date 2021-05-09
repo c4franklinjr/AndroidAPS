@@ -27,7 +27,7 @@
 
     <!--    Treatment-->
     <color name="tempbasal">#C803A9F4</color>
-    <color name="listdelimiter">#505050</color>
+    <color name="list_delimiter">#505050</color>
 
     <!--    BgReading-->
     <color name="inrange">#00FF00</color>
@@ -40,6 +40,10 @@
     <color name="uam">#c9bd60</color>
     <color name="zt">#00d2d2</color>
     <color name="white">#ffffff</color>
+
+    <color name="daySelected">#D000FF00</color>
+    <color name="weekdayOutline">#1ea3e5</color>
+    <color name="weekendOutline">#1e88e5</color>
 
     <!--    CareportalEvent-->
     <color name="notificationAnnouncement">#FF8C00</color>

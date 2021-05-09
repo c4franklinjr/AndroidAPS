@@ -2,7 +2,6 @@ package info.nightscout.androidaps.plugins.pump.medtronic;
 
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.os.SystemClock;
@@ -90,6 +89,7 @@ import info.nightscout.androidaps.utils.DateUtil;
 import info.nightscout.androidaps.utils.FabricPrivacy;
 import info.nightscout.androidaps.utils.TimeChangeType;
 import info.nightscout.androidaps.utils.resources.ResourceHelper;
+import info.nightscout.androidaps.utils.rx.AapsSchedulers;
 import info.nightscout.androidaps.utils.sharedPreferences.SP;
 
 
@@ -140,7 +140,8 @@ public class MedtronicPumpPlugin extends PumpPluginAbstract implements PumpInter
             MedtronicHistoryData medtronicHistoryData,
             RileyLinkServiceData rileyLinkServiceData,
             ServiceTaskExecutor serviceTaskExecutor,
-            DateUtil dateUtil
+            DateUtil dateUtil,
+            AapsSchedulers aapsSchedulers
     ) {
 
         super(new PluginDescription() //
@@ -152,7 +153,7 @@ public class MedtronicPumpPlugin extends PumpPluginAbstract implements PumpInter
                         .preferencesId(R.xml.pref_medtronic)
                         .description(R.string.description_pump_medtronic), //
                 PumpType.Medtronic_522_722, // we default to most basic model, correct model from config is loaded later
-                injector, resourceHelper, aapsLogger, commandQueue, rxBus, activePlugin, sp, context, fabricPrivacy, dateUtil
+                injector, resourceHelper, aapsLogger, commandQueue, rxBus, activePlugin, sp, context, fabricPrivacy, dateUtil, aapsSchedulers
         );
 
         this.rileyLinkUtil = rileyLinkUtil;
@@ -559,7 +560,7 @@ public class MedtronicPumpPlugin extends PumpPluginAbstract implements PumpInter
 
     private boolean initializePump(boolean realInit) {
 
-        if (rileyLinkMedtronicService==null)
+        if (rileyLinkMedtronicService == null)
             return false;
 
         aapsLogger.info(LTag.PUMP, getLogPrefix() + "initializePump - start");
@@ -874,13 +875,7 @@ public class MedtronicPumpPlugin extends PumpPluginAbstract implements PumpInter
                         // LOG.debug("MedtronicPumpPlugin::deliverBolus - Show dialog. Context: "
                         // + MainApp.instance().getApplicationContext());
 
-                        Intent i = new Intent(context, ErrorHelperActivity.class);
-                        i.putExtra("soundid", R.raw.boluserror);
-                        i.putExtra("status", getResourceHelper().gs(R.string.medtronic_cmd_cancel_bolus_not_supported));
-                        i.putExtra("title", getResourceHelper().gs(R.string.medtronic_warning));
-                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        context.startActivity(i);
-
+                        ErrorHelperActivity.Companion.runAlarm(context,getResourceHelper().gs(R.string.medtronic_cmd_cancel_bolus_not_supported), getResourceHelper().gs(R.string.medtronic_warning), R.raw.boluserror);
                     }).start();
                 }
 
@@ -1561,12 +1556,7 @@ public class MedtronicPumpPlugin extends PumpPluginAbstract implements PumpInter
                 if (rileyLinkMedtronicService.verifyConfiguration()) {
                     serviceTaskExecutor.startTask(new WakeAndTuneTask(getInjector()));
                 } else {
-                    Intent i = new Intent(context, ErrorHelperActivity.class);
-                    i.putExtra("soundid", R.raw.boluserror);
-                    i.putExtra("status", getResourceHelper().gs(R.string.medtronic_error_operation_not_possible_no_configuration));
-                    i.putExtra("title", getResourceHelper().gs(R.string.medtronic_warning));
-                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    context.startActivity(i);
+                    ErrorHelperActivity.Companion.runAlarm(context, getResourceHelper().gs(R.string.medtronic_error_operation_not_possible_no_configuration), getResourceHelper().gs(R.string.medtronic_warning), R.raw.boluserror);
                 }
             }
             break;
